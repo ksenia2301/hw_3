@@ -1,3 +1,56 @@
-## Шаблон для третьего ДЗ по ИПР
+## \# Домашнее задание №3
 
-Условие дз доступно по [ссылке](https://github.com/Nikfilk2030/missing_semester_hse_cs/blob/main/2026/amcs/year_1/hw_3/README.md)
+## 
+
+## \### Сборка Docker-образа
+
+## 
+
+## ```powershell
+
+## docker build -t hw3-app .
+
+## ```
+
+## 
+
+## \### Запуск контейнера
+
+## 
+
+## ```powershell
+
+## docker run -d --name hw3-container -p 8080:8000 -e GREETING="Привет! Docker работает!" -e STORAGE=sqlite hw3-app
+
+## ```
+
+## 
+
+## Приложение доступно по адресу: http://localhost:8080/
+
+## 
+
+## \### Проверка работы
+
+## 
+
+## \- `GET /` — просмотр счётчика.
+
+## \- `POST /increment` — увеличение счётчика на 1.
+
+## \- `GET /healthz` — проверка работы сервера.
+
+## \- `GET /readyz` — проверка хранилища.
+
+## 
+
+## \### Просмотр логов
+
+## 
+
+## ```powershell
+
+## docker logs hw3-container
+
+## ```
+
