@@ -27,3 +27,24 @@ docker run -d --name hw3-container -p 8080:8000 -e GREETING="Привет! Docke
 docker logs hw3-container
 ```
 
+Запуск через Docker Compose (6 баллов)
+
+Создала файл `docker-compose.yml` для запуска приложения через Docker Compose.
+
+Настройки хранятся в `.env`, пример настроек — в `.env.example`:
+```env
+APP_PORT=8080
+GREETING=Привет! Docker работает!
+```
+
+Запуск приложения:
+docker compose up -d --build
+```
+
+Для хранения данных использую `my_data`, поэтому счётчик сохраняется после пересоздания контейнера.
+
+Остановка приложения:
+docker compose down
+```
+
+Проверила сохранение данных: после повторного запуска значение счётчика осталось равным `1`.

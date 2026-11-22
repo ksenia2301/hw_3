@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    ports:
+      - "${APP_PORT}:8000"
+    environment:
+      - GREETING=${GREETING}
+      - STORAGE=sqlite
+      - DATA_FILE=/data/counter.db
+    volumes:
+      - my_data:/data
+
+volumes:
+  my_data:
