@@ -20,6 +20,7 @@ docker run -d --name hw3-container -p 8080:8000 -e GREETING="Привет! Docke
 - `POST /increment` — увеличение счётчика на 1.
 - `GET /healthz` — проверка работы сервера.
 - `GET /readyz` — проверка хранилища.
+
 Просмотр логов
 
 ```powershell
